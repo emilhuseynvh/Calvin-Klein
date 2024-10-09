@@ -1,6 +1,5 @@
 import React, { CSSProperties, useState } from 'react'
 import { IoSearch } from "react-icons/io5";
-import { FaShoppingBasket } from "react-icons/fa";
 
 const list = ['New', 'Women', 'Underwear', 'Kids', 'Home', 'Sale']
 
