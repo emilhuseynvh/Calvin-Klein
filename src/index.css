@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{overflow-x: hidden !important;}
+
+@font-face {
+    font-family: 'Klein';
+    src: url('assets/font/Klein-Book.ttf') format('truetype');
+    font-style: normal;
+}
+
+.text {
+  display: inline-block;
+  position: relative;
+}
+
+.text::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translateX(5%);
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--underline-color, #4E2526);
+  transition: width 0.4s ease;
+}
+
+.text:hover::after {
+  width: 90%;
+}
