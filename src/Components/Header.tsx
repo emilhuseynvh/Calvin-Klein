@@ -1,9 +1,11 @@
 import React, { CSSProperties, useState } from 'react'
 import { IoSearch } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 
-const list = ['New', 'Women', 'Underwear', 'Kids', 'Home', 'Sale']
+const list: string[] = ['New', 'Women', 'Underwear', 'Kids', 'Home', 'Sale']
 
 const Header: React.FC = () => {
+    const navigate = useNavigate()
     const [exit, setExit] = useState<boolean>(false)
     const handleClick = () => {
         setExit(!exit)
@@ -16,7 +18,7 @@ const Header: React.FC = () => {
                     {list.map((item, i) => <li style={{ '--underline-color': '#4E2526' } as CSSProperties} key={i} className='px-2 cursor-pointer text'>{item}</li>)}
                 </ul>
                 <div className='lg:w-1/3 flex justify-center'>
-                    <img className='select-none cursor-pointer' src="assets/img/logo.svg" alt="Logo" />
+                    <img onClick={() => navigate('/')} className='select-none cursor-pointer' src="assets/img/logo.svg" alt="Logo" />
                 </div>
                 <div className='lg:w-1/3 flex justify-end'>
                     <div className='flex items-center'>

@@ -86,11 +86,11 @@ const CollectionShowcase: React.FC = () => {
                     </div>
                     <div className='flex absolute items-center gap-2.5 cursor-pointer text-white bottom-3 left-1/4 -translate-x-1/2'>
                         <MdArrowOutward className='w-5 h-5 md:hidden block' />
-                        <p className='border-b border-white'>Women</p>
+                        <p className='md:border-b border-white'>Women</p>
                     </div>
                     <div className='flex absolute items-center cursor-pointer gap-2.5 text-white bottom-3 right-1/4 translate-x-1/2'>
                         <MdArrowOutward className='w-5 h-5 md:hidden block' />
-                        <p className='border-b border-white'>Men</p>
+                        <p className='md:border-b border-white'>Men</p>
                     </div>
                 </div>
             ))}
