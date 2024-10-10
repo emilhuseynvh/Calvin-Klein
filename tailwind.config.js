@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         'home-bg': '#FAF3E4',
-        'home-text': '#4E2526'
+        'home-text': '#4E2526',
+        'dark-white': '#999'
       },
       fontFamily: {
         'klein': ['Klein', 'Helvetica', 'sans-serif']

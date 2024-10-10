@@ -1,10 +1,10 @@
 import React from 'react'
-interface categories {
+interface Categories {
     name: string,
     list: string[]
 }
 
-const categories = [
+const categories: Categories[] = [
     {
         name: 'Women',
         list: [
