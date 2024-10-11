@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoMdClose, IoMdStar } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 
@@ -45,14 +45,26 @@ interface SearchProps {
 
 const Search: React.FC<SearchProps> = ({ setSearch }) => {
     const [clear, setClear] = useState<string>('')
+    const [isScreenSmall, setIsScreenSmall] = useState<boolean>(window.innerWidth < 500);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsScreenSmall(window.innerWidth < 500);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
-        <div className='bg-black w-[500px] h-full text-white p-10'>
+        <div className={`bg-black  ${isScreenSmall ? 'w-screen' : 'w-[500px]'} h-full text-white p-10`}>
             <IoMdClose className='absolute cursor-pointer right-6 top-10 size-6' onClick={() => setSearch(false)} />
             <div className='flex items-center'>
                 <IoSearch className='size-6 mr-2' />
                 <input onChange={(e) => setClear(e.target.value)} value={clear} className='bg-transparent outline-none placeholder-grey_ w-[330px]' type="text" placeholder='What are you looking for...' />
-                <span onClick={() => setClear('')} className={`${clear ? 'block' : 'hidden'} ml-2 text-grey_ text-xs cursor-pointer`}>Clear</span>
+                <span onClick={() => setClear('')} className={`${clear ? 'block' : 'hidden'} ml-2 text-grey_ text-xs cursor-pointer mr-6`}>Clear</span>
             </div>
             <p className='text-grey_ mt-10'>Popular Categories</p>
             <ul>
