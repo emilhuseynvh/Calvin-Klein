@@ -130,7 +130,7 @@ const Lists: React.FC = () => {
                     ))}
                 </div>
             </ul>
-            <div className='flex flex-col gap-10'>
+            <div className='hidden flex-col gap-10 md:flex'>
                 {about.map((item, i) => {
                     return (
                         <div key={i}>
