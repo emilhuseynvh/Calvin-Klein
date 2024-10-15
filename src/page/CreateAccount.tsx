@@ -44,7 +44,6 @@ const CreateAccount: React.FC = () => {
             validateField(field);
         }
     };
-
     const validateField = (field: keyof Errors) => {
         let newErrors: Errors = { ...errors };
 
@@ -110,6 +109,15 @@ const CreateAccount: React.FC = () => {
         <div className='my-14 sm:mx-20'>
             <div className='sm:max-w-[416px] w-[90vw] mx-auto'>
                 <h1 className='mb-6 text-[32px] font-medium'>Create an Account</h1>
+                <div className='bg-[#f2ede3] rounded-lg mb-6 p-4 font-medium'>
+                    <h3 className='text-[#726039] font-semibold text-sm mb-2 leadin-[19.5] tracking-[.2px]'>Join the Preferred Loyalty Program. Members get:</h3>
+                    <ul className='pl-5'>
+                        <li className='text-[#726039] font-medium text-sm flex items-center gap-1'><span className='w-1.5 h-1.5 bg-[#726039] block rounded-[50%]'></span> $1 spent = 1 point</li>
+                        <li className='text-[#726039] font-medium text-sm flex items-center gap-1'><span className='w-1.5 h-1.5 bg-[#726039] block rounded-[50%]'></span>200 points = $20 reward</li>
+                        <li className='text-[#726039] font-medium text-sm flex items-center gap-1'><span className='w-1.5 h-1.5 bg-[#726039] block rounded-[50%]'></span>Fast, easy checkout</li>
+                        <li className='text-[#726039] font-medium text-sm flex items-center gap-1'><span className='w-1.5 h-1.5 bg-[#726039] block rounded-[50%]'></span>Special birthday gift</li>
+                    </ul>
+                </div>
 
                 <Input 
                     name='first_name' 
