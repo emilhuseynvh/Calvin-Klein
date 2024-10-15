@@ -31,3 +31,32 @@ body{overflow-x: hidden !important;}
 .text:hover::after {
   width: 90%;
 }
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #696969;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: black;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  color: white;
+  width: 5px;
+  height: 9px;
+  position: absolute;
+  top: 1.5px;
+  left: 4.6px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(43deg);
+}
+

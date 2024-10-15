@@ -17,7 +17,7 @@ const SubscribeSection: React.FC = () => {
       <div className="space-y-2">
         <h2 className="text-lg font-bold">Text JOIN to 225846 to get Free Shipping</h2>
         <p className="text-sm text-[#808080]">
-          Sign up for mobile texts to receive offer. Never miss out on exclusive launches, styles, and promotions.{' '}
+          Sign up for mobile texts to receive offer. Never miss out on exclusive launches, styles, and promotions.
           <span className="underline cursor-pointer">Details</span>
         </p>
       </div>

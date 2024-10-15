@@ -6,6 +6,8 @@ interface categoryProps {
     setCategory: (value: boolean) => void
 }
 
+
+
 const subCategory: string[] = ['Campaigns', 'Women', 'Men', 'Underwear', 'Calvin Klein Studio']
 
 const CategoryList: React.FC<categoryProps> = ({ setCategory }) => {
@@ -17,7 +19,7 @@ const CategoryList: React.FC<categoryProps> = ({ setCategory }) => {
                 <MdOutlineChevronRight className='group-hover:block hidden duration-300 size-6' />
             </p>
             <div className='mt-11 flex items-center justify-between'>
-                <ul className=''>
+                <ul>
                     {subCategory.map((item, i) => <li className='my-8 font-medium w-fit text-[25px] cursor-pointer hover:border-b border-white leading-[22.5px]' key={i}>{item}</li>)}
                 </ul>
                 <ul>
